@@ -30,9 +30,9 @@ public class KMP {
 		int match = 0;
 		int position = 0;
 		int[] table = KMP.generateTable(pattern);
-		while (match + 1 < text.length()) {
-			if (pattern.charAt(position) == text.charAt(match + 1)) {
-				if (position == text.length()) return match;
+		while (match + position < text.length()) {
+			if (pattern.charAt(position) == text.charAt(match + position)) {
+				if (position == pattern.length() - 1) return match;
 				position += 1;
 			}
 			else {

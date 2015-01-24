@@ -8,8 +8,8 @@ public class KMPTest {
 
 	@Test
 	public void test() {
-		String text = "ABBACABADBBABDBAC";
-		String pattern = "BACA";
+		String text = "ABBACABAABCDABDBDBAC";
+		String pattern = "ABCDABD";
 		int match = KMP.search(text, pattern);
 		System.out.println(match);
 	}
